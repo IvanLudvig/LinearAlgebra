@@ -5,7 +5,7 @@ import Subspace
 def ker(A):
     M = A.copy()
     F, c = Gauss.solve(M, [0]*len(M))
-    return F
+    return Gauss.transpose(F)
 
 def Im(A):
     M = A.copy()
@@ -13,5 +13,6 @@ def Im(A):
 
 
 # A = [[0, 1, 1], [1, 1, 0], [-1, 0, 1]]
-# print(ker(A))
-# print(Im(A))
+A = [[9, 6, 9, 6], [1, 1, 1, 1]]
+print(ker(A))
+print(Im(A))

@@ -51,6 +51,8 @@ def Gauss(A, b):
     m = len(A[0])
     for i in range(n):
         for j in range(m):
+            if(A[i][j]<=1e-8):
+                A[i][j]=0
             if A[i][j] != 0:
                 b[i] /= A[i][j]
                 A[i] = scaleRow(A[i], 1 / A[i][j])
@@ -130,6 +132,7 @@ def solve(A, b):
     A, b = sortRows(A, b)
     return solution(A, b)
 
-# F, c = solve([[1, -1, 2], [3, -3, 6], [2, -2, 4]], [3, 9, 6])
+#F, c = solve([[-1, -3, 1, -4], [-3, -5, -1, -8], [0, 2, -2, 2], [3, 3, 3, 6]], [0, 0, 0, 0])
+# F, c = solve( [ [8, -2, -2], [0, 1, -1] ], [0, 0] )
 # print("F: ", F)
 # print("c: ", c)

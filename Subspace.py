@@ -16,7 +16,7 @@ def basis(L):
 
 
 def addition(L1, L2):
-    return basis(basis(L1) + basis(L2))
+    return basis(L1+L2)
 
 
 def intersection(L1, L2):
@@ -32,6 +32,7 @@ def intersection(L1, L2):
 
 # U = [[1, 1, 1], [4, 2, 1], [2, 0, -1]]
 # V = [[-2, 3, 1], [1, 4, 1], [5, -2, -1]]
-#
+# U = [ [3, 5, 2], [5, 9, 6] ]
+# V = [[1, 2, 2]]
 # print(addition(U, V))
 # print(intersection(U, V))
